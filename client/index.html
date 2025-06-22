@@ -4,10 +4,17 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style.css">
     <script type="module" src="./src/main.js" defer></script>
-    <title>Motorsport Message Board</title>
+    <title>Nurburgring 2025 Guestbook</title>
   </head>
   <body>
-    
+    <form id="feedbackForm">
+      <input type="text" name="senderName" placeholder="Name" />
+      <input type="text" name="feedback" placeholder="Please enter your feedback here..." />
+      <input type="number" min="0" max="5" name="rating" placeholder="Rating out of 5..." />
+      <button type="submit">Submit Feedback</button>
+    </form>
+    <section id="feedbackSection"></section>
   </body>
 </html>
