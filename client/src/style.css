@@ -1,0 +1,162 @@
+@font-face {
+    font-family: "Nurburgring";
+    src: url("../fonts/Nurburgring.ttf");
+}
+
+* {
+    font-family: Nurburgring;
+}
+
+body {
+    margin: 0;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-centre-horizontal {
+    justify-content: center;
+}
+
+.flex-centre-vertical {
+    align-items: center;
+}
+
+.flex-space-around {
+    justify-content: space-around;
+}
+
+.flex-space-between {
+    justify-content: space-between;
+}
+
+.flex-stretch {
+    align-items: stretch;
+}
+
+.page-logo {
+    width: 30%;
+    height: 30%;
+}
+
+.page-title {
+    font-size: 52px;
+    margin: 5px 0px 5px 0px;
+}
+
+.message-container {
+    background-color: rgb(211, 211, 211);
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.name {
+    font-size: 72px;
+}
+
+.feedback-text {
+    font-size: 52px;
+    font-weight: normal;
+}
+
+.extra-text {
+    font-size: 32px;
+    font-weight: normal;
+}
+
+.text-margin {
+    margin: 5px;
+}
+
+.centre-text-horizontal {
+    text-align: center;
+}
+
+button {
+    font-size: 24px;
+    background-color: transparent;
+    border: 0;
+    width: 6vw;
+    height: 6vh;
+}
+
+button:hover {
+    color: rgb(100, 176, 44);
+}
+
+.feedback-field {
+    width: 41vw;
+    height: 40vh;
+}
+
+.top-field {
+    width: 20vw;
+    height: 3vh;
+}
+
+.submit-button {
+    width: 40vw;
+    background-color: rgb(100, 176, 44);
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.submit-button:hover {
+    background-color: black;
+    color: white;
+}
+
+@media (max-width: 800px) and (orientation: portrait) {
+    .page-logo {
+        width: 80%;
+        height: 80%;
+    }
+
+    .feedback-field {
+        width: 80vw;
+        height: 30vh;
+    }
+
+    .top-field {
+        width: 38vw;
+        height: 3vh;
+    }
+
+    button {
+        font-size: 12px;
+        background-color: transparent;
+        border: 0;
+        width: 15vw;
+        height: 6vh;
+    }
+
+    .submit-button {
+        width: 70vw;
+        border: 3px;
+        margin: 5px;
+        font-size: 24px;
+    }
+
+    .name {
+        font-size: 32px;
+    }
+
+    .feedback-text {
+        font-size: 14px;
+        font-weight: normal;
+    }
+
+    .extra-text {
+        font-size: 10px;
+        font-weight: normal;
+    }
+}

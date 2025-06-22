@@ -9,12 +9,24 @@
     <title>Nurburgring 2025 Guestbook</title>
   </head>
   <body>
+    <header class="flex-container flex-column flex-centre-horizontal flex-centre-vertical">
+      <img class="page-logo" src="./images/logo.webp">
+      <h1 class="page-title">Feedback Form</h1>
+    </header>
     <form id="feedbackForm">
-      <input type="text" name="senderName" placeholder="Name" />
-      <input type="text" name="feedback" placeholder="Please enter your feedback here..." />
-      <input type="number" min="0" max="5" name="rating" placeholder="Rating out of 5..." />
-      <button type="submit">Submit Feedback</button>
+      <div class="flex-container flex-column flex-centre-vertical">
+        <div>
+          <input type="text" name="senderName" placeholder="Name" class="top-field" />
+          <input type="number" min="0" max="5" name="rating" placeholder="Rating out of 5..." class="top-field" />
+        </div>
+        <div>
+          <input type="text" name="feedback" placeholder="Please enter your feedback here..." class="feedback-field" />
+        </div>
+        <div>
+          <button type="submit" class="submit-button">Submit Feedback</button>
+        </div>
+      </div>
     </form>
-    <section id="feedbackSection"></section>
+    <section id="feedbackSection" class="flex-container flex-column flex-stretch"></section>
   </body>
 </html>
