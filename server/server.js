@@ -3,6 +3,8 @@ import cors from "cors";
 import dotenv from "dotenv";
 import pg from "pg";
 
+import { FormatDateStringForServer } from "../client/src/string.js";
+
 const app = express();
 
 app.use(cors());
@@ -23,6 +25,20 @@ app.get("/messages", async (req, res) => {
 
     res.json(result.rows);
 })
+
+app.post("/messages", async (req, res) => {
+    const body = req.body;
+
+    const nameFromClient = body.sender;
+    const feedbackFromClient = body.feedback;
+    const ratingFromClient = Number(body.rating);
+    const postDate = FormatDateStringForServer(new Date());
+    const initialLikes = 0;
+
+    const data = await db.query(`INSERT INTO messages (content, sender, rating, date, likes) VALUES ($1, $2, $3, $4, $5)`, [feedbackFromClient, nameFromClient, ratingFromClient, postDate, initialLikes]);
+
+    res.send(data);
+});
 
 app.listen("4974", () => {
     console.log("Server running...");

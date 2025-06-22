@@ -1,11 +1,11 @@
-import * as string from "./string";
+import { FormatDateStringForClient } from "./string.js";
 
 const feedbackSection = document.getElementById("feedbackSection");
 const feedbackForm = document.getElementById("feedbackForm");
 
 async function FetchMessages()
 {
-    const res = await fetch("http://localhost:4974/messages");
+    const res = await fetch("https://nurburgring24guestbook-server.onrender.com/messages");
     const messages = await res.json();
     return messages;
 }
@@ -24,7 +24,7 @@ async function DisplayMessages()
 
         div.append(name, messageContent, date, rating, likes);
 
-        const dateString = string.FormatDateString(new Date(singleMessage.date));
+        const dateString = FormatDateStringForClient(new Date(singleMessage.date));
 
         name.innerText = singleMessage.sender;
         messageContent.innerText = singleMessage.content;
